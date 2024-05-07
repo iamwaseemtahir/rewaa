@@ -1,0 +1,16 @@
+version: "3"
+
+services:
+  rabbitmq:
+    image: rabbitmq:3-management-alpine  
+    ports:
+      - "5672:5672"  # Default RabbitMQ port
+      - "15672:15672"  # Management UI port
+  mongodb:
+    image: mongo:latest  
+    ports:
+      - "27017:27017"  
+  redis:
+    image: redis:latest  
+    ports:
+      - "6379:6379"
